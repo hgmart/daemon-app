@@ -1,13 +1,11 @@
 ﻿using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -34,6 +32,7 @@ namespace DaemonApp
         {
             var result = CallAPI().Result;
             Console.WriteLine(result);
+            Console.ReadKey();
         }
 
         static async Task<string> CallAPI()
